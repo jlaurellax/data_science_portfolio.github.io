@@ -8,8 +8,8 @@ plugins:
 
 #-------------------------------
 # General Site Settings
-title: Jeff Laurel, MS x 2, RRT
-description: "Hi I'm Jeff, and I'm a Respiratory Therapist turned Data Scientist.  My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
+title: Jeff Laurel, MS, RRT
+description: "Hi I'm Jeff, and I'm a Respiratory Therapist turned Data Scientist.  My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and machine learning using classification and regression approaches. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -22,7 +22,7 @@ avatar_image: /img/profile_picture.JPG
 
 #-------------------------------
 # Contact links
-linkedln: "https://linkedln.com/#" # Add your linkedln handle
+linkedln: "https://linkedln.com//in/jeff-laurel-ms-rrt-02273311/" # Add your linkedln handle
 github: "https://github.com/#"  # Add your github handle
 
 paginate: 6
