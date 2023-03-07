@@ -11,29 +11,29 @@ If you don't remember what a Prime number is, it is a number that can only be di
 
 ---
 
-First, let's start by setting up a variable that will act as the upper limit of numbers we want to search through. We'll start with 20, so we're essentially wanting to find all prime numbers that exist that are equal to or smaller than 20
+First, let's start by setting up a variable that will act as the upper limit of numbers we want to search through. We'll start with 20, so this means we want to find all prime numbers that exist that are equal to or smaller than 20.
 
 ```ruby
 n = 20
 ```
 
-The smallest true Prime number is 2, so we want to start by creating a range of numbers between 2 and what we set above as the upper bound, in this case 20. We use n+1 because the range logic is not inclusive of the upper limit of 20.
+The smallest true Prime number is 2, so we start by creating a range of numbers between 2 and what we set above as the upper bound, in this case 20. We use n+1 because the range logic is not inclusive of the upper limit of 20.
 
-Instead of using a list, we're going to use a set.  The reason for this is that sets have some special functions that will allow us to eliminate non-primes during our search.  You'll see what I mean soon...
+Instead of using a list, we use a set.  The reason for this is that sets have some special functions that will allow us to eliminate non-primes during our search.  You'll see what I mean soon.
 
 ```ruby
 number_range = set(range(2, n+1))
 ```
 
-Let's also create a place where we can store any primes we discover.  A list is perfect for this.
+Let's also create an object that stores any primes we discover.  A list works well for storing multiple items in a single variable.
 
 ```ruby
 primes_list = []
 ```
 
-We use a while loop to iterate through the list and check for primes, but before we construct that, I find it valuable to code up the logic and iterate manually through it first.  This means I can check that it is working correctly before I set it off to run through everything on it's own.
+We will use a while loop to iterate through the list and check for primes, but before constructing that, let's code up the logic and iterate manually through it first.  This allows us to check that it is working correctly before running through everything with a loop.
 
-So, we have our set of numbers called number_range to check all integers between 2 and 20. Let's extract the first number from that set to check if it's a prime. If it is, we add it to our list called primes_list. If it isn't a prime, we don't keep it.
+So, we have our set of numbers called number_range that checks all integers between 2 and 20. Let's extract the first number from that set to check if it's a prime. If it is, we add it to our list called primes_list. If it isn't a prime, we don't keep it.
 
 There is a Python list method named *pop* which removes an element from a list or set and provides that value to us.
 
