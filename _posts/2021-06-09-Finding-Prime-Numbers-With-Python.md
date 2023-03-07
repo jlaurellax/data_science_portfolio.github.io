@@ -59,28 +59,28 @@ print(primes_list)
 >>> [2]
 ```
 
-Now we're going to do a special trick to check our remaining number_range for non-primes. For the prime number we just checked (the number 2) we want to generate all the multiples of that up to our upper range (in our case, 20).
+Now we're going to do a special trick to check our remaining number_range for non-primes. For the prime number we just checked (the number 2), we want to generate all the multiples of that up to our upper range (in our case, 20).
 
-We're going to again use a set rather than a list, because it allows us some special functionality that we'll use soon, which is the magic of this approach.
+We're going to again use a set rather than a list, because it allows for some special functionality that we'll use soon.
 
 ```ruby
 multiples = set(range(prime*2, n+1, prime))
 ```
 
-Remember that when creating a range with the range function, the syntax is range(start, stop, step). For the starting point - we don't need our first prime number since that has already been added as a prime, so let's start our range of multiples at 2 * our number as that is the first multiple, in our case, our number is 2 so the first multiple will be 4. If the number we were checking was 3 then the first multiple would be 6 - and so on.
+Remember that when creating a range with the range function, the syntax is range(start, stop, step). For the starting point, we don't need our first prime number since that has already been added as a prime, so let's start the range of multiples at 2 * our number as that is the first multiple. In our case, our number is 2, so the first multiple will be 4. If the number we were checking was 3 then the first multiple would be 6, and so on.
 
-For the stopping point of our range - we specify that we want our range to go up to 20, so we use n+1 to specify that we want 20 to be included.
+For the stopping point of our range, we specify that we want our range to go up to 20, so we use n+1 to specify that we want 20 to be included.
 
-Now, the **step** is key here.  We want multiples of our number, so we want to increment in steps *of our* number so we can put in **prime** here
+Now, the **step** is key here.  We want multiples of our number, so we want to increment in steps *of our* number so we can put in **prime** here.
 
-Lets have a look at our list of multiples...
+Lets look at our list of multiples.
 
 ```ruby
 print(multiples)
 >>> {4, 6, 8, 10, 12, 14, 16, 18, 20}
 ```
 
-The next part is the magic I spoke about earlier, we're using the special set functionality **difference_update** which removes any values from our number range that are multiples of the number we just checked. The reason we're doing this is because if a number is a multiple of anything other than 1 or itself, then it is **not a prime number** and can remove it from the list to be checked.
+The next part uses the special set functionality **difference_update** which removes any values from our number range that are multiples of the number we just checked. The reason we're doing this is because if a number is a multiple of anything other than 1 or itself, then it is **not a prime number** and we can remove it from the list to be checked.
 
 Before we apply the **difference_update**, let's look at our two sets.
 
@@ -102,15 +102,15 @@ print(number_range)
 >>> {3, 5, 7, 9, 11, 13, 15, 17, 19}
 ```
 
-When we look at our number range now, all values that were also present in the multiples set have been removed as we *know* they were not primes.
+When we look at our number range now, all values that were also present in the multiples set have been removed since we *know* they were not primes.
 
-We've made a massive reduction to the pool of numbers that need to be tested, so this is really efficient. It also means the smallest number in our range *is a prime number* as we know nothing smaller than it divides into it...and this means we can run all that logic again from the top!
+We've made a massive reduction to the pool of numbers that need to be tested, so this is really efficient. It also means the smallest number in our range *is a prime number* as we know nothing smaller than it divides into it and this means we can run all that logic again from the top!
 
-Whenever you can run sometime over and over again, a while loop can be a good solution.
+Whenever you can run sometime over and over again, you can use a while loop.
 
 Here is the code, with a while loop doing the hard work of updating the number list and extracting primes until the list is empty.
 
-Let's run it for any primes below 1000...
+Let's run it for any primes below 1000.
 
 ```ruby
 n = 1000
@@ -136,7 +136,7 @@ print(primes_list)
 >>> [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997]
 ```
 
-Let's now get some interesting stats from our list which we can use to summarise our findings, the number of primes that were found, and the largest prime in the list.
+Let's now get some interesting stats from our list which we can use to summarize our findings, return the number of primes that were found, and determine the largest prime in the list.
 
 ```ruby
 prime_count = len(primes_list)
@@ -170,7 +170,7 @@ def primes_finder(n):
     print(f"There are {prime_count} prime numbers between 1 and {n}, the largest of which is {largest_prime}")
 ```
 
-Now we can just pass the function the upper bound of our search and it will do the rest!
+Now we can just pass the function the upper bound of our search and it will do the rest.
 
 Let's go for something large, say a million...
 
@@ -179,9 +179,9 @@ primes_finder(1000000)
 >>> There are 78498 prime numbers between 1 and 1000000, the largest of which is 999983
 ```
 
-That's a wrap on this project!
+That's a wrap on this project! I didn't know there were that many prime numbers between 1 and 1,000,000. Did you?
 
-I hope you enjoyed learning about prime numbers, and one way to search for them using Python.
+I hope you enjoyed learning about prime numbers and one way to search for them using Python.
 
 ---
 
