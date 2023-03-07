@@ -19,13 +19,13 @@ n = 20
 
 The smallest true Prime number is 2, so we start by creating a range of numbers between 2 and what we set above as the upper bound, in this case 20. We use n+1 because the range logic is not inclusive of the upper limit of 20.
 
-Instead of using a list, we use a set.  The reason for this is that sets have some special functions that will allow us to eliminate non-primes during our search.  You'll see what I mean soon.
+Instead of using a list for the range, we'll use a set.  This is because a set has special functions that allow us to eliminate non-primes during our search.  You'll see what I mean soon.
 
 ```ruby
 number_range = set(range(2, n+1))
 ```
 
-Let's also create an object that stores any primes we discover.  A list works well for storing multiple items in a single variable.
+Let's also create an object that stores any primes we discover.  We'll use a list for this because a list works well for storing multiple items in a single variable.
 
 ```ruby
 primes_list = []
