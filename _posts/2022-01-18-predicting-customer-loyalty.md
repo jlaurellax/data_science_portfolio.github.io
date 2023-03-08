@@ -780,7 +780,7 @@ That code gives us the below plot - which visualizes the results.
 In the plot we can see that the *maximum* classification accuracy on the test set is found when applying a *max_depth* value of 7.  However, we lose very little accuracy back to a value of 4, but this would result in a simpler model, that generalized even better on new data.  We make the executive decision to re-train our Decision Tree with a maximum depth of 4.
 
 <br>
-### Visualize Our Decision Tree <a name="regtree-visualise"></a>
+### Visualize the Decision Tree <a name="regtree-visualise"></a>
 
 To see the decisions that have been made in the (re-fitted) tree, we can use the plot_tree functionality that we imported from scikit-learn.  To do this, we use the below code:
 
