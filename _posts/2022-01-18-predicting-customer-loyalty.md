@@ -16,11 +16,11 @@ Our client, a grocery retailer, hired a market research consultancy to append ma
     - [Growth/Next Steps](#overview-growth)
     - [Key Definition](#overview-definition)
 - [01. Data Overview](#data-overview)
-- [02. Modelling Overview](#modelling-overview)
+- [02. Modeling Overview](#modelling-overview)
 - [03. Linear Regression](#linreg-title)
 - [04. Decision Tree](#regtree-title)
 - [05. Random Forest](#rf-title)
-- [06. Modelling Summary](#modelling-summary)
+- [06. Modeling Summary](#modelling-summary)
 - [07. Predicting Missing Loyalty Scores](#modelling-predictions)
 - [08. Growth & Next Steps](#growth-next-steps)
 
@@ -534,7 +534,7 @@ ___
 <br>
 # Decision Tree <a name="regtree-title"></a>
 
-We will again utlise the scikit-learn library within Python to model our data using a Decision Tree. The code sections below are broken up into 4 key sections:
+We will again utlize the scikit-learn library within Python to model our data using a Decision Tree. The code sections below are broken up into 4 key sections:
 
 * Data Import
 * Data Preprocessing
