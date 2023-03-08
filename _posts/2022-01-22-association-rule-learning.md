@@ -65,7 +65,7 @@ A proposal from the results is to build a "search engine" for category managers,
 
 An example is searching for any products that associate strongly with "New Zealand" products. There appeared to be *some* relationship between New Zealand wines and other New Zealand wines, but what is also interesting is that New Zealand wines seemed to be more associated with French & South American wines than they were with Australian Wines.
 
-New Zealand & Australia are often grouped together, but because of climate differences, the wines are very different and thus it wouldn't make sense to group wines by geographical proximity, but by preference instead.  This is only a hypothesis for now - this will need to go back to the client and get their category experts to help us determine it!
+New Zealand & Australia are often grouped together, but because of climate differences, the wines are very different and it might not make sense to group wines by geographical proximity, but by preference instead.  This is only a hypothesis for now, as this will need to go back to the client for their category experts to help determine it.
 
 <br>
 <br>
