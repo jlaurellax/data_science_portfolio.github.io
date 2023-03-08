@@ -73,9 +73,9 @@ New Zealand & Australia are often grouped together, but because of climate diffe
 
 As this is first & foremost an exploratory project, the results would go to the client Category Managers with a discussion of the results, any views on how these insights can be actioned best, and any considerations that need to be taken into account when interpreting.
 
-Next would come any ecommendations for applying this same logic to all other categories, as well as potentially across the full-product range.
+Next would come any recommendations for applying this same logic to all other categories, as well as potentially across the full-product range.
 
-Finally, the proposal for the build of the "Keyword Search Engine" which will help Category Managers extract and utilise the insights held within the data.
+The last step would be the proposal for building a "Keyword Search Engine", which will help Category Managers extract and utilize the insights held within the data.
 
 <br>
 <br>
