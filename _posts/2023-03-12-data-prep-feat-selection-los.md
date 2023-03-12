@@ -18,7 +18,7 @@ The dataset contains about 32,000 records with data consisting of patient demogr
     - [Results & Discussion](#overview-results)
 - [01. Concept Overview](#concept-overview)
 - [02. Data Overview & Preparation](#data-overview)
-- [03. Applying Chi-Square Test For Independence](#chi-square-application)
+- [03. Applying RFECV for Feature Selection](#chi-square-application)
 - [04. Analyzing The Results](#chi-square-results)
 - [05. Discussion](#discussion)
 
