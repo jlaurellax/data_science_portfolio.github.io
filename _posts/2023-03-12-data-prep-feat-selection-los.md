@@ -33,7 +33,6 @@ It is assumed that most people working with data understand the importance of cl
 This dataset came to me as part of a coding test for a position I elected not to pursue. The test requirement was to prepare the dataset for use with predictive models and specifically, for predicting hospital length of stay as the outcome variable. There are a number of clinical and non-clinical input variables included. While I did well enough at the time with the task, in reviewing the work I submitted then, I realized I could have made it more efficient and as I began building this portfolio, it occurred to me to revisit these steps as a project to include in my portfolio, as data cleaning and feature selection are regular steps performed by data scentists and these steps also demonstrate a person's thought process when analyzing raw data needing some cleansing.
 
 <br>
-<br>
 ### Actions <a name="overview-actions"></a>
 
 This project focuses on completing the steps for dealing with extreme values (i.e., outliers), missing values, converting categorical values, and performing feature scaling before using a technique called Recursive Feature Elimination with Cross-Validation to select features, using the RFECV module from the Sci-Kit Learn library.  Full details of this module and the concept behind its use are in the dedicated section below. Coding samples are included.
