@@ -30,7 +30,7 @@ ___
 
 It is assumed that most people working with data understand the importance of cleaning and preparing a dataset before attempting to use the dataset in a Machine Learning project. Dealing with extreme or missing values, and correcting / converting data types are common steps in this process. Datasets often have variables that are unnecessary for making predictions on the outcome under investigation and steps should therefore be completed for removing these. 
 
-This dataset came to me as part of a coding test for a position I chose not to pursue. The test requirement was to prepare the dataset for use with predictive models and specifically, for predicting hospital length of stay as the outcome variable. There are multiple clinical and non-clinical input variables included. While I did well enough at the time with the task, looking back on it, I realized I could have made it more efficient, so when began building this portfolio, it occurred to me to revisit this as a project for inclusion.
+This dataset came to me as part of a coding test for a position I chose not to pursue. The test requirement was to prepare the dataset for use with predictive models and specifically, for predicting hospital length of stay as the outcome variable. There are multiple clinical and non-clinical input variables included. While I did well enough at the time with the task, looking back on it, I realized I could have made it more efficient, so when I began building this portfolio, it occurred to me to revisit this as a project for inclusion.
 
 <br>
 ### Actions <a name="overview-actions"></a>
@@ -77,7 +77,11 @@ I next perform the following steps:
 
 The initial dataframe presents with 32,000 rows and 221 columns (features). There are 8790 duplicate rows and dropping these results in remaining 23,210 rows. Checking for missing values results in input variables missing between 5 - 98% of values. Because of this widespread variability, I chose not to impute any missing values, even for input variables with a low percentages. Because this is clinical data, if this were being used for a maching learning model, it is likely more appropriate to use factual data, as opposed to imputed, since no two patients are 100% alike. Therefore, I chose to drop any features that contained missing values. 
 
-This action reduced the number of columns from 221 to 49! The upside to such an action is the dimensionality reduction that occurs, which likely results in less overall complexity, less required sotrage space, and improved computational time.
+This action reduced the number of columns from 221 to 49! The upside to such an action is the dimensionality reduction that occurs, which likely results in less overall complexity, less required storage space, and improved computational time. The downside to this includes potentially losing important data which can affect model training later. Still, in reviewing the columns that remained after dropping, they all seemed to be clinically relevant to the outcome variable and I felt satisfied with the decision, especially knowing that this can always be revisited and with a different approach used for handling missing data. This decision-making example reflects an important skill for a Data Scientist, whether performing it as a domain subject-matter expert, or with the appropriate stakeholder feedback, or both!
+
+With the remaining columns, I dropped an unnecessary column for encounter ID as this column had no value other than to create noise and take up feature space. From there, I 
+
+
 
 
 
