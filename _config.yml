@@ -9,7 +9,7 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Jeff Laurel, MS, RRT
-description: "Hi I'm Jeff, and I'm a Respiratory Therapist turned Data Scientist.  My portfolio focuses on interesting projects I've recently undertaken, with an emphasis on business impact and machine learning classification and regression models. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
+description: "Hi I'm Jeff, and I'm a Respiratory Therapist turned Data Scientist.  My portfolio focuses on interesting projects I've recently completed, with an emphasis on business impact and machine learning using Python, unless otherwise noted. Please visit my Github & LinkedIn pages or download my Resume by using the links below!"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
