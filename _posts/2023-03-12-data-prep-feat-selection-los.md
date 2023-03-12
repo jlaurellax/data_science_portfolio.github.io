@@ -42,11 +42,25 @@ My first step with any project is to import the required packages that I'll use.
 
 **Note:** while the data preparation steps typically occur after the dataframe is constructed, if I'm the person retrieving the raw data (i.e., writing the SQL), I'll often do some of the preparation in SQL first. Examples include compressing the data to the appropriate cardinality, grouping the data into appropriate groups, or creating Boolean (1/0) columns from the raw data values. I may have to repeat these steps after creating the dataframe in Python, but I often save time by doing as much of this in SQL first.
 
-I set the hypotheses and Acceptance Criteria for the test, as follows:
+I next performed the following steps:
 
-**Null Hypothesis:** There is no relationship between mailer type and signup rate. They are independent.
-**Alternate Hypothesis:** There is a relationship between mailer type and signup rate. They are not independent.
-**Acceptance Criteria:** 0.05
+**Data Preparation** 
+
+* Check the shape of the dataframe
+* Check for duplicate rows
+* Drop the duplicate rows
+* Recheck the shape to confirm the previous drop
+* Check for missing values
+* Determine the percentage of missing values for each variable
+* Drop or impute missing values
+* Review the data types of the variables
+* Perform data type conversions / convert categorical variables to numeric
+* Check for extreme (outlier) values
+* Perform feature scaling, if indicated
+* Shuffle the data, if indicated
+
+**Feature Selection** 
+
 
 The Chi-Square Test For Independence requires the data to be aggregated to a 2x2 matrix for *signup_flag* by *mailer_type* and then fed into the algorithm (using the *scipy* library) to calculate the Chi-Square Statistic, p-value, Degrees of Freedom, and expected values.
 
