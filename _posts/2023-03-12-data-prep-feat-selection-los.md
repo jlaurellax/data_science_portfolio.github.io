@@ -75,27 +75,11 @@ I next perform the following steps:
 
 ### Results & Discussion <a name="overview-results"></a>
 
-Based upon the observed values, the observer is provided some context with the sign-up rate of each group:
+The initial dataframe presents with 32,000 rows and 221 columns (features). There are 8790 duplicate rows and dropping these results in remaining 23,210 rows. Checking for missing values results in input variables missing between 5 - 98% of values. Because of this widespread variability, I chose not to impute any missing values, even for input variables with a low percentages. Because this is clinical data, if this were being used for a maching learning model, it is likely more appropriate to use factual data, as opposed to imputed, since no two patients are 100% alike. Therefore, I chose to drop any features that contained missing values. 
 
-* Mailer 1 (Low Cost): **32.8%** signup rate
-* Mailer 2 (High Cost): **37.8%** signup rate
+This action reduced the number of columns from 221 to 49! The upside to such an action is the dimensionality reduction that occurs, which likely results in less overall complexity, less required sotrage space, and improved computational time.
 
-However, the Chi-Square Test provides the following statistics:
 
-* Chi-Square Statistic: **1.94**
-* p-value: **0.16**
-
-The Critical Value for the specified Acceptance Criteria of 0.05 is **3.84**
-
-Based upon these statistics, the decision is to retain the null hypothesis, and conclude that there is no relationship between mailer type and signup rate.
-
-In other words - while the higher cost Mailer 2 had a higher signup rate (37.8%) than the lower cost Mailer 1 (32.8%) it appears that this difference is not significant, at least at the Acceptance Criteria of 0.05.
-
-Without running this Hypothesis Test, the client may have concluded that they should always look to go with higher cost mailers - and from what this test yields, that may not be a great decision.  It would result in them spending more, but not *necessarily* gaining any extra revenue as a result.
-
-The results here also do not say that there *definitely isn't a difference between the two mailers* - just not to make any rigid conclusions *at this point*.  
-
-Running more A/B Tests like this, gathering more data, and then re-running this test may provide more insight.
 
 <br>
 <br>
