@@ -2,8 +2,8 @@
 ---
 layout: post
 title: Data Preparation & Feature Selection for Predicting Length of Stay
-image: "/posts/coffee_python.jpg"
-tags: [Python, Data Cleaning, RFECV]
+image: "/posts/cleaning.jpg"
+tags: [Data Cleaning, Healthcare, Python, RFECV]
 ---
 
 # My first project
