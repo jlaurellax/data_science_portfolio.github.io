@@ -2,7 +2,7 @@
 layout: post
 title: Finding Prime Numbers with Python
 image: "/posts/primes_image.jpeg"
-tags: [Python, Primes]
+tags: [Numpy, Primes]
 ---
 
 In this project, I build a function in Python that can quickly find all prime numbers below a given value.  For example, if I passed the function a value of 100, it will return all prime numbers below 100.
