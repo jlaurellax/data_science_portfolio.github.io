@@ -59,7 +59,7 @@ I next perform the following steps:
 * Perform feature scaling, if indicated
 * Shuffle the data, if indicated
 
-**Note:** the above steps are outlined at a high level and describe how I go about preparing data, but are not meant to imply any absolutes and realize that others may have their own process. Some of the above steps can also occur in different sequences depending on the project needs.
+**Note:** the above steps are outlined at a high level and describe how I generally prepare data, but are not meant to imply any absolutes. It is important to recognize that others may have their own, albeit similar, process. Some of the above steps may also occur in different sequences depending on the project needs.
 
 **Feature Selection** 
 
