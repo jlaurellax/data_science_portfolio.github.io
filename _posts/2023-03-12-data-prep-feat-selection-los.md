@@ -36,13 +36,7 @@ This dataset came to me as part of a coding test for a position I elected not to
 <br>
 ### Actions <a name="overview-actions"></a>
 
-This project focuses on completing the steps for dealing with extreme values (i.e., outliers), missing values, converting categorical values, and performing feature scaling before using a technique called Recursive Feature Elimination with Cross-Validation to select features, using the RFECV module from the Sci-Kit Learn library.  Full details of this methodolgy in is the dedicated section below.
-
-**Note:** Another option when comparing "rates" is a test known as the *Z-Test For Proportions*.  While this test could be used, I chose the Chi-Square Test For Independence because:
-
-* The resulting test statistic for both tests will be the same
-* The Chi-Square Test can be represented using 2x2 tables of data - meaning it can be easier to explain to stakeholders
-* The Chi-Square Test can extend out to more than 2 groups - meaning the client can have one consistent approach to measuring signficance
+This project focuses on completing the steps for dealing with extreme values (i.e., outliers), missing values, converting categorical values, and performing feature scaling before using a technique called Recursive Feature Elimination with Cross-Validation to select features, using the RFECV module from the Sci-Kit Learn library.  Full details of this module and the concept behind its use are in the dedicated section below. Coding samples are included.
 
 From the *campaign_data* table in the client database, I isolated customers that received "Mailer 1" (low cost) and "Mailer 2" (high cost) for this campaign, and excluded customers who were in the control group.
 
