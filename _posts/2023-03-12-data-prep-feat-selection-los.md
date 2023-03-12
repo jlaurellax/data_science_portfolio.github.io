@@ -28,7 +28,7 @@ ___
 
 ### Context <a name="overview-context"></a>
 
-It is assumed that most people working with data understand the importance of cleaning and preparing a dataset before attempting to use the dataset in a Machine Learning project. Dealing with extreme or missing values, and correcting / converting data types are common steps in this process. Datasets often have variables that may not be needed with making predictions on the outcome under investigation, and steps should therefore be completed for removing these. 
+It is assumed that most people working with data understand the importance of cleaning and preparing a dataset before attempting to use the dataset in a Machine Learning project. Dealing with extreme or missing values, and correcting / converting data types are common steps in this process. Datasets often have variables that are unnecessary for making predictions on the outcome under investigation, and steps should therefore be completed for removing these. 
 
 This dataset came to me as part of a coding test for a position I elected not to pursue. The test requirement was to prepare the dataset for use with predictive models and specifically, for predicting hospital length of stay as the outcome variable. There are a number of clinical and non-clinical input variables included. While I did well enough at the time with the task, in reviewing the work I submitted then, I realized I could have made it more efficient and as I began building this portfolio, it occurred to me to revisit these steps as a project to include in my portfolio, as data cleaning and feature selection are regular steps performed by data scentists and these steps also demonstrate a person's thought process when analyzing raw data needing some cleansing.
 
@@ -42,7 +42,7 @@ My first step with any project is to import the required packages that I'll use.
 
 **Note:** while the data preparation steps typically occur after the dataframe is constructed, if I'm the person retrieving the raw data (i.e., writing the SQL), I'll often do some of the preparation in SQL first. Examples include compressing the data to the appropriate cardinality, grouping the data into appropriate groups, or creating Boolean (1/0) columns from the raw data values. I may have to repeat these steps after creating the dataframe in Python, but I often save time by doing as much of this in SQL first.
 
-I next performed the following steps:
+I next perform the following steps:
 
 **Data Preparation** 
 
@@ -58,6 +58,8 @@ I next performed the following steps:
 * Check for extreme (outlier) values
 * Perform feature scaling, if indicated
 * Shuffle the data, if indicated
+
+**Note:**the above steps are outlined at a high level and describe how I go about preparing data, but are not meant to imply any absolutes and realize that others may have their own process. Some of the above steps can also occur in different sequences depending on the project needs.
 
 **Feature Selection** 
 
