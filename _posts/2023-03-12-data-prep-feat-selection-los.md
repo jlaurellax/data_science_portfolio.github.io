@@ -5,7 +5,7 @@ image: "/posts/cleaning.jpg"
 tags: [Data Cleaning, Healthcare, RFECV]
 ---
 
-This project uses Python to demonstrate the steps for cleaning and preparing a dataset with multiple variables and data types, and then selecting the appropriate features that contribute to a specific outcome; in this case, hospital length of stay.
+This project uses Python to demonstrate the steps for preparing a dataset with multiple variables and data types, and then selecting the appropriate features that contribute to a specific outcome; in this case, hospital length of stay.
 
 The dataset contains about 32,000 records with data consisting of patient demographics, diagnoses, medical history, and vital signs. This data is fictitious, but represents true clinical outcomes and values. 
 
