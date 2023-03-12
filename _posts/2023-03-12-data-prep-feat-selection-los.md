@@ -38,7 +38,7 @@ This dataset came to me as part of a coding test for a position I elected not to
 
 This project focuses on completing the steps for dealing with extreme values (i.e., outliers), missing values, converting categorical values, and performing feature scaling before using a technique called Recursive Feature Elimination with Cross-Validation to select features, using the RFECV module from the Sci-Kit Learn library.  Full details of this module and the concept behind its use are in the dedicated section below. Coding samples are included.
 
-From the *campaign_data* table in the client database, I isolated customers that received "Mailer 1" (low cost) and "Mailer 2" (high cost) for this campaign, and excluded customers who were in the control group.
+My first step with any project is to import the required packages that I'll use. I then import the dataset, generally as a Comma-Separated Values (CSV) file, into a dataframe using the Pandas library. An important note is that, while the data preparation steps naturally occur after the dataframe is constructed, if I'm the person retrieving the raw data (i.e., writing the SQL), I'll often do the preparation in SQL first. An example of this is compressing the data to the appropriate cardinality, grouping the data into appropriate groups, or creating Boolean (1/0) columns from the raw data values. Of course, I may have to repeat these steps after creating the dataframe in Python, but I often save time by doing as much of this in SQL first.
 
 I set the hypotheses and Acceptance Criteria for the test, as follows:
 
