@@ -80,7 +80,13 @@ This action reduced the number of columns from 221 to 49! The upside to such an 
 
 With the remaining columns, I dropped an unnecessary column for encounter ID as this column had no value other than to create noise and take up feature space. From there, I checked for exteme values, or outliers. I used a Boxplot approach for this where I created a for loop that passes over all of the remaining continuous numeric variables and identifies which ones are outliers based on threshold borders set around the 25% and 75% quartiles, or the interquartile range (IQR), from the respective column values. The decision to keep or remove outliers from the data always depends on the data and what you want to do with it. From the outliers assessment, I determined that, aside from Age, each of the other continuous numeric variables has a small percentge of outliers present. I chose to include these for this project as these values would contribute to a patient's length of stay, and so, are clinically appropriate. 
 
-Next, I shuffled the data and converted variables that presented as numeric, but are actually categorical. These are the "Admission Month" and "Charlson Comormidity Index" variables.
+Next, I shuffled the data and converted variables that presented as numeric, but are actually categorical. I then performed One Hot Encoding on the categorical variables to convert these to Boolean (1/0) values. I used the OneHotEncoder module from Sci-Kit Learn for this step.
+
+Next, I scaled the remaining numeric data to a Normalized scale, so that these features would not be inappropriately weighted higher than the other features. I used the MinMaxScaler module from Sci-Kit Learn to do this. I created a new normalized dataframe after the scaling action.
+
+Finally, with the data in a prepared state in a new dataframe, I performed the steps for Feature Selection listed above. As these steps are more technical, I describe those more in the "Applying RFECV section." 
+
+
 
 
 
