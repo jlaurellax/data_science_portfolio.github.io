@@ -70,10 +70,6 @@ I next perform the following steps:
 
 **Note:** the above steps are outlined at a high level and describe how I generally prepare data and perform feature selection, but are not meant to imply any absolutes. It is important to recognize that others may have their own, albeit similar, process. Some of the above steps may also occur in different sequences depending on the project needs.
 
-
-The Chi-Square Test For Independence requires the data to be aggregated to a 2x2 matrix for *signup_flag* by *mailer_type* and then fed into the algorithm (using the *scipy* library) to calculate the Chi-Square Statistic, p-value, Degrees of Freedom, and expected values.
-
-<br>
 <br>
 
 ### Results & Discussion <a name="overview-results"></a>
