@@ -105,7 +105,9 @@ ___
 
 # Data Overview and Preparation <a name="data-overview"></a>
 
-The initial dataframe presents with 32,000 rows and 221 columns (features). Through a series of data preparation steps (see the Jupyter notebook in my projects repository for the full steps and associated Python code), I arrived at 49 remaining feature columns. These feat
+The initial dataframe presents with 32,000 rows and 221 columns (features). Through a series of data preparation steps (see the Jupyter notebook in my projects repository for the full steps and associated Python code), I arrived at 49 remaining feature columns. These features appear in the below image:
+
+![alt text](/img/posts/causal-impact-results-plot.png "Causal Impact Results Plot")
 
 
 
