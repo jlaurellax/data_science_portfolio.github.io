@@ -105,7 +105,7 @@ ___
 
 # Data Overview and Preparation <a name="data-overview"></a>
 
-The initial dataframe presents with 32,000 rows and 221 columns (features). Through a series of data preparation steps, I arrived at 48 remaining feature columns. Performing One Hot Encoding on the categorical variables increased the number of features to 60. I then scaled all features to a normalized scale, given that most already consisted of 1/0 values. These steps are included in the Jupyter Notebook for the project here (https://github.com/jlaurellax/project_notebooks/blob/master/Data%20Preparation%20%26%20Feature%20Selection%20with%20Healthcare%20Data.ipynb).
+The initial dataframe presents with 32,000 rows and 221 columns (features). Through a series of data preparation steps, I arrived at 48 remaining feature columns. Performing One Hot Encoding on the categorical variables increased the number of features to 60. I then scaled all features to a normalized scale, given that most already consisted of 1/0 values. These steps are included in the Jupyter Notebook for the project [here] (https://github.com/jlaurellax/project_notebooks/blob/master/Data%20Preparation%20%26%20Feature%20Selection%20with%20Healthcare%20Data.ipynb).
 
 
 
