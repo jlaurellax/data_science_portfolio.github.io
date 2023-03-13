@@ -88,16 +88,6 @@ Finally, with the data in a prepared state in a new dataframe, I performed the s
 
 As the output variable (Length of Stay) is a continuous numeric variable and because I chose to keep the outliers in the dataset, I chose a Random Forest Regressor for use with the RFECV selector object. Random Forests, by nature, are less sensitive to outliers, so it made sense to use this for the Regressor object used by the RFECV selector. The selector identified 13 inputs as the optimal number of features and I ranked these by their mean cross-validation test score. The input variable, "Chronic Condition Count', had the highest score and a rank of 1 with "Age" coming in 13th with the lowest score. 
 
-
-
-
-
-
-
-
-
-
-
 <br>
 <br>
 
@@ -106,11 +96,11 @@ ___
 # Concept Overview  <a name="concept-overview"></a>
 
 <br>
-#### A/B Testing
+#### Data Preparation & Feature Selection
 
-An A/B Test can be described as a randomized experiment containing two groups, A & B, that receive different experiences. Within an A/B Test, we look to understand and measure the response of each group - and the information from this helps drive future business decisions.
+There are likely multiple definitions and variations on what it means to prepare data for analysis and machine learning. I put my own spin on a definition that I liked from Databricks where they define Data Preparation (also referred to as “data preprocessing”) as the process of transforming raw data, so that data analysts and data scientists can run it through machine learning algorithms to uncover insights or make predictions. Another benefit to having properly prepared, or "cleaned", data is that machine learning models will perform better than with messy, or unprepared data. Messy data also has multiple meanings for different audiences, but at a high-level, it means data that includes missing values, unscaled data, unstructured data, variables with incorrect data types, and whitespace. This is not an exhaustive list and is simply meant to provide a high-level view of why data needs to be processed before a machine learning algorthm, let alone a human, can interpret or use it.
 
-Application of A/B testing can range from testing different online ad strategies, different email subject lines when contacting customers, or testing the effect of mailing customers a coupon, vs a control group.  Companies like Amazon are running these tests in an almost never-ending cycle, testing new website features on randomised groups of customers...all with the aim of finding what works best so they can stay ahead of their competition.  Reportedly, Netflix will even test different images for the same movie or show, to different segments of their customer base to see if certain images pull more viewers in.
+A basic and easy to understand definition for Feature Selection comes from Simplilearn where they define it as "the method of reducing the input variable to your model by using only relevant data and getting rid of noise in data. It is the process of automatically choosing relevant features for your machine learning model based on the type of problem you are trying to solve." What this shares with Data Preparation is the need for optimal performance and interpretability, both of which occur when the "noisy" inputs are removed.
 
 ___
 
