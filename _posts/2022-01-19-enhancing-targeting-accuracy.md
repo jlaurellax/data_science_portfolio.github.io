@@ -15,7 +15,7 @@ Our client, a grocery retailer, wants to utilize Machine Learning to reduce mail
     - [Results](#overview-results)
     - [Growth/Next Steps](#overview-growth)
 - [01. Data Overview](#data-overview)
-- [02. Modelling Overview](#modelling-overview)
+- [02. Modeling Overview](#modelling-overview)
 - [03. Logistic Regression](#logreg-title)
 - [04. Decision Tree](#clftree-title)
 - [05. Random Forest](#rf-title)
