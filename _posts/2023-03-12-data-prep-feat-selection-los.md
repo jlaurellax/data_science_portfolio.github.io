@@ -100,6 +100,7 @@ There are likely multiple definitions and variations on what it means to prepare
 
 A basic and easy to understand definition for Feature Selection comes from Simplilearn where they define it as “the method of reducing the input variable to your model by using only relevant data and getting rid of noise in data. It is the process of automatically choosing relevant features for your machine learning model based on the type of problem you are trying to solve.” Feature Selection is similar to Data Preparation in that there is the need for optimal model performance and interpretability, both of which occur when the “noisy” inputs are removed.
 
+<br>
 ___
 
 # Data Overview and Preparation <a name="data-overview"></a>
