@@ -92,7 +92,6 @@ As the output variable (Length of Stay) is a continuous numeric variable and bec
 ___
 
 # Concept Overview  <a name="concept-overview"></a>
-
 <br>
 #### Data Preparation & Feature Selection
 
