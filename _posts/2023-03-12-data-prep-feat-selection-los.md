@@ -89,8 +89,6 @@ Finally, with the data in a prepared state in a new dataframe, I performed the s
 As the output variable (Length of Stay) is a continuous numeric variable and because I chose to keep the outliers in the dataset, I chose a Random Forest Regressor for use with the RFECV selector object. Random Forests, by nature, are less sensitive to outliers, so it made sense to use this for the Regressor object used by the RFECV selector. The selector identified 13 inputs as the optimal number of features and I ranked these by their mean cross-validation test score. The input variable, "Chronic Condition Count', had the highest score and a rank of 1 with "Age" coming in 13th with the lowest score. 
 
 <br>
-<br>
-
 ___
 
 # Concept Overview  <a name="concept-overview"></a>
@@ -99,6 +97,7 @@ ___
 #### Data Preparation & Feature Selection
 
 There are likely multiple definitions and variations on what it means to prepare data for analysis and machine learning. I put my own spin on a definition that I liked from Databricks where they define Data Preparation (also referred to as “data preprocessing”) as the process of transforming raw data, so that data analysts and data scientists can run it through machine learning algorithms to uncover insights or make predictions. Another benefit to having properly prepared, or “cleaned”, data is that machine learning models will perform better than with messy, or unprepared data. Messy data also has multiple meanings for different audiences, but at a high-level, it means data that includes missing values, unscaled data, unstructured data, variables with incorrect data types, and whitespace. This is not an exhaustive list and is simply meant to provide a high-level view of why data needs to be processed before a machine learning algorithm, let alone a human, can interpret or use it.
+
 A basic and easy to understand definition for Feature Selection comes from Simplilearn where they define it as “the method of reducing the input variable to your model by using only relevant data and getting rid of noise in data. It is the process of automatically choosing relevant features for your machine learning model based on the type of problem you are trying to solve.” Feature Selection is similar to Data Preparation in that there is the need for optimal model performance and interpretability, both of which occur when the “noisy” inputs are removed.
 
 ___
