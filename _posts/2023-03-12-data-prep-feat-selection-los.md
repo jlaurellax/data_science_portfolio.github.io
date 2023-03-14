@@ -120,9 +120,11 @@ Feature Selection is the process used to select the input variables that are mos
 
 One method for performing Feature Selection is **Recursive Feature Elimination (RFE)**, which is an approach that starts with all input variables, and then iteratively removes those with the weakest relationships with the output variable.
 
-I applied a variation of RFE called **Recursive Feature Elimination With Cross Validation (RFECV)** whick splits the data into many “chunks” (this is the Cross-Validation piece), and iteratively trains and validates a predictive model (called the "esitmator") on each “chunk” separately. The estimator selects the best subset of features by removing 0 to N features, where N is the number of features, using recursive feature elimination, then selecting the best subset based on the cross-validation score of the model. Different models (estimators) can be used with this approach, depending on the types of variables and outputs.
+I applied a variation of RFE called **Recursive Feature Elimination With Cross Validation (RFECV)** whick splits the data into many “chunks” (this is the Cross-Validation piece), and iteratively trains and validates a predictive model (called the "esitmator") on each “chunk” separately. The estimator selects the best subset of features by removing 0 to N features, where N is the number of features, using recursive feature elimination, then selecting the best subset based on the mean cross-validation score of the model. Different models (estimators) can be used with this approach, depending on the types of variables and outputs.
 
 For this project, I used a Random Forest Regressor as the estimator, since the output variable is a continuous numeric variable, and because I chose to retain the outliers. Random Forests are generaly less sensitive to outliers which made this a good choice for use as the estimator with the RFECV selector.
+
+The RFECV selector chose 13 optimal features based on the mean cross-validation test score. In the plot below, after the count of 13, there is no more improvement in the mean score after 13, and this becomes the optimal feature count.
 
 
 
