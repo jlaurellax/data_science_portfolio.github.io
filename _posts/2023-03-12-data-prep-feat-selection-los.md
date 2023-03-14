@@ -126,7 +126,7 @@ For this project, I used a Random Forest Regressor as the estimator, since the o
 
 The RFECV selector chose 13 optimal features based on the mean cross-validation test score. In the plot below, after the count of 13, there is no more improvement in the mean score after 13, and this becomes the optimal feature count.
 <br>
-![alt text](/img/posts/pca-variance-plots.png "Feature Selection Using RFE")
+![alt text](/img/posts/dataprep_project_rfecv_plot.png "Feature Selection")
 
 
 
