@@ -28,7 +28,7 @@ ___
 
 ### Context <a name="overview-context"></a>
 
-It is assumed that most people working with data understand the importance of cleaning and preparing a dataset before attempting to use the dataset in a Machine Learning project. Dealing with extreme or missing values and correcting / converting data types are common steps in this process. Datasets often have variables that are unnecessary for making predictions on the outcome under investigation and steps should therefore be completed for removing them. 
+Preparing, or "cleaning", a dataset is an important first step before attempting to use the data for analysis or with a Machine Learning model. Dealing with extreme or missing values and correcting / converting data types are common steps in this process. Datasets often have variables that are unnecessary for making predictions on the outcome under investigation and steps should therefore be completed for removing them. 
 
 This dataset came to me as part of a coding test for a position I chose not to pursue. The test requirement was to prepare the dataset for use with predictive models and specifically, for predicting hospital length of stay as the outcome variable. There are multiple clinical and non-clinical input variables included. While I did well enough at the time with the task, looking back on it, I realized I could have coded it more efficiently, so when I began building this portfolio, I decided to revisit it as a project for inclusion.
 
