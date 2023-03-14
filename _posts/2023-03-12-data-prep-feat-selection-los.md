@@ -111,7 +111,7 @@ The data preparation steps are detailed in the Jupyter Notebook for this project
 The initial dataframe presents with 32,000 rows and 221 columns (features) of various clinical data. Through a series of data preparation steps, I arrived at 48 remaining feature columns. Performing One Hot Encoding on the categorical variables increased the number of features to 60. I then scaled all features to a normalized scale, given that most already consisted of 1/0 values. 
 
 <br>
-### Applying RFECV for Feature Selection <a name="rfecv-application"></a>
+# Applying RFECV for Feature Selection <a name="rfecv-application"></a>
 
 Feature Selection is the process used to select the input variables that are most important to your Machine Learning task. It can be a very important addition or at least, consideration, in certain scenarios. The potential benefits of Feature Selection are:
 
@@ -126,7 +126,7 @@ I applied a variation of RFE called **Recursive Feature Elimination with Cross V
 For this project, I used a Random Forest Regressor as the estimator, since the output variable is a continuous numeric variable, and because I chose to retain the outliers. Random Forests are generally less sensitive to outliers which made this a good choice for use as the estimator with the RFECV selector.
 
 <br>
-### Analyzing the Results <a name="rfecv-results"></a>
+# Analyzing the Results <a name="rfecv-results"></a>
 
 The RFECV selector chose 13 optimal features based on the mean cross-validation test score. In the plot below, there is no further improvement in the mean score after the feature count of 13, so this becomes the optimal number of features.
 
@@ -150,7 +150,7 @@ Ranking the features by mean cross-validation test score yielded the below featu
 13. Age of Patient
 
 <br>
-### Discussion <a name="discussion"></a>
+# Discussion <a name="discussion"></a>
 
 The features selected from the RFECV process logically contribute to a patient's length of stay, so while the selections are not necessarily surprising, it would be interesting to see what the outcome might be if different data preparation steps are followed in the future, such as dropping outliers or imputing missing values, if clinically appropriate. This might change the model type then used as the RFECV estimator likely resulting in different feature selections. 
 
