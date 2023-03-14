@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Under Construction Data Preparation & Feature Selection for Predicting Length of Stay
+title: Data Preparation & Feature Selection for Predicting Length of Stay
 image: "/posts/cleaning.jpg"
 tags: [Data Cleaning, Healthcare, RFECV]
 ---
@@ -155,6 +155,8 @@ Ranking the features by mean cross-validation test score yielded the below featu
 The features selected would naturally all contribute to a patient's length of stay, so while they are not necessarily surprising, it would be interesting to see what the outcome might be if different data preparation steps are followed in the future, such as dropping outliers or imputing missing values, if clinically appropriate. This might change the model type then used as the RFECV estimator likely resulting in different feature selections. 
 
 With the approach used for the project, the next steps would be to construct a dataframe with the selected features and use it with different regression machine learning models like multiple linear regression, random forest regression, or even other more advanced models, like Support Vector Regression. I will tackle this in a future project, so stay tuned!
+
+Project photo courtesy of No Revisions via https://unsplash.com/photos/cpIgNaazQ6w.
 
 
 
