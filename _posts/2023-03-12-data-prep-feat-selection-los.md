@@ -74,13 +74,19 @@ I next perform the following steps:
 
 ### Results & Discussion <a name="overview-results"></a>
 
-The initial dataframe presents with 32,000 rows and 221 columns (features). There are 8790 duplicate rows and dropping these results in 23,210 remaining rows. Checking for missing values results in input variables missing between 5 - 98% of values. Because of this widespread variability, I chose not to impute any missing values, even for input variables with a low percentages. Because this is clinical data, if this were being used for a maching learning model, it is likely more appropriate to use factual data, as opposed to imputed, since no two patients are 100% alike. Therefore, I chose to drop any features that contained missing values. 
+The initial dataframe presents with 32,000 rows and 221 columns (features). There are 8790 duplicate rows and dropping these results in 23,210 remaining rows. Checking for missing values results in input variables missing between 5 - 98% of values. Because of this widespread variability, I chose not to impute any missing values, even for input variables with low percentages. Because this is clinical data, if this were being used for a maching learning model, it is likely more appropriate to use factual data, as opposed to imputed, since no two patients are 100% alike. Therefore, I chose to drop any features that contained missing values. 
 
 This action reduced the number of columns from 221 to 49! The upside to such an action is the dimensionality reduction that occurs, which likely results in less overall complexity, less required storage space, and improved computational time. The downside to this includes potentially losing important data, which can affect model training later. Still, in reviewing the columns that remained after dropping, they all seemed to be clinically relevant and I felt satisfied with the decision, especially knowing that this can always be revisited and with a different approach. 
 
-With the remaining columns, I dropped an unnecessary column for encounter ID as this column had no value other than to create noise and take up feature space. From there, I checked for exteme values, or outliers. I used a Boxplot approach for this where I created a for loop that passed over all of the remaining continuous numeric variables and identified the outliers based on threshold borders set around the 25% and 75% quartiles, or the interquartile range (IQR), from the respective column values. The decision to keep or remove outliers from the data always depends on the data and what you want to do with it. From the outliers assessment, I determined that, aside from Age, each of the other continuous numeric variables has a small percentage of outliers present. I chose to include these for this project as these values would contribute to a patient's length of stay, and so, are clinically appropriate. 
+With the remaining columns, I dropped an unnecessary column for encounter ID as this column had no value other than to create noise and take up feature space. From there, I checked for exteme values, or outliers. I used a Boxplot approach for this where I created a for loop that passed over all of the remaining continuous numeric variables and identified the outliers based on threshold borders set around the 25% and 75% quartiles, or the interquartile range (IQR), from the respective column values. The decision to keep or remove outliers from the data always depends on the data and what you intend to do with it. From the outliers assessment, I determined there were relatively few. I chose to include the outliers because, in reality, these values **WOULD** contribute to a patient's length of stay, and so, are clinically appropriate. 
 
-Next, I shuffled the data and converted variables that presented as numeric, but were actually categorical. I then performed One Hot Encoding on the categorical variables to convert these to Boolean (1/0) values. I used the OneHotEncoder module from Sci-Kit Learn for this step. This increased the number of input variables to 60.
+Next, I shuffled the data and converted variables that presented as numeric, but were actually categorical. I then performed One Hot Encoding on the categorical variables to convert these to Boolean (1/0) values. I used the OneHotEncoder module from Sci-Kit Learn for this step. 
+
+One Hot Encoding can be thought of as a way to represent categorical variables as binary vectors, in other words, a set of new columns for each categorical value with either a 1 or a 0 saying whether that value is true or not for that observation. These new columns would go into our model as input variables, and the original column is discarded. 
+
+I dropped one of the new columns using the parameter drop = “first” to avoid the dummy variable trap, where the newly created encoded columns perfectly predict each other and this runs the risk of breaking the assumption that there is no multicollinearity. This is a requirement, or at least an important consideration, for some models, Linear Regression being one of them. Multicollinearity occurs when two or more input variables are highly correlated with each other, and while it won’t neccessarily affect the predictive accuracy of models used with this dataset, it can make it difficult to trust the statistics around how well the model performs.
+
+From performing One Hot Encoding, the number of input variables increased to 60.
 
 Next, I scaled the remaining numeric data to a Normalized scale, so that these features would not be inappropriately weighted higher than the other features. I used the MinMaxScaler module from Sci-Kit Learn to do this. I created a new normalized dataframe after the scaling action.
 
@@ -102,7 +108,11 @@ ___
 
 # Data Overview and Preparation <a name="data-overview"></a>
 
-The initial dataframe presents with 32,000 rows and 221 columns (features). Through a series of data preparation steps, I arrived at 48 remaining feature columns. Performing One Hot Encoding on the categorical variables increased the number of features to 60. I then scaled all features to a normalized scale, given that most already consisted of 1/0 values. These steps are included in the Jupyter Notebook for the project [here](https://github.com/jlaurellax/project_notebooks/blob/master/Data%20Preparation%20%26%20Feature%20Selection%20with%20Healthcare%20Data.ipynb).
+These data preparation steps are included in the Jupyter Notebook for this project [here](https://github.com/jlaurellax/project_notebooks/blob/master/Data%20Preparation%20%26%20Feature%20Selection%20with%20Healthcare%20Data.ipynb).
+
+The initial dataframe presents with 32,000 rows and 221 columns (features). Through a series of data preparation steps, I arrived at 48 remaining feature columns. Performing One Hot Encoding on the categorical variables increased the number of features to 60. I then scaled all features to a normalized scale, given that most already consisted of 1/0 values. 
+
+For selecting 
 
 
 
