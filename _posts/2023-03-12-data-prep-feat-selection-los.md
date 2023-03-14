@@ -70,7 +70,6 @@ I next perform the following steps:
 * Sort and rank the chosen features by an appropriate statistic
 
 **Note:** the above steps are outlined at a high level and describe how I generally prepare data and perform feature selection, but are not meant to imply any absolutes. It is important to recognize that others may have their own, albeit similar, process. Some of the above steps may also occur in different sequences depending on the project needs.
-
 <br>
 ### Results & Discussion <a name="overview-results"></a>
 
