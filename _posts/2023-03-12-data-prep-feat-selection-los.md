@@ -156,7 +156,8 @@ The features selected from the RFECV process logically contribute to a patient's
 
 With the approach used for the project, the next steps would be to construct a dataframe with the selected features and use it with different regression machine learning models like multiple linear regression, random forest regression, or even other more advanced models, like Support Vector Regression. I will tackle this in a future project, so stay tuned!
 
-Project photo courtesy of No Revisions via https://unsplash.com/photos/cpIgNaazQ6w.
+Headline photo courtesy of No Revisions via [https://unsplash.com/photos/cpIgNaazQ6w].
+
 
 
 
