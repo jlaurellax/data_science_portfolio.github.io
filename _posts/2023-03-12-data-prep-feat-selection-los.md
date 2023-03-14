@@ -125,6 +125,8 @@ I applied a variation of RFE called **Recursive Feature Elimination With Cross V
 For this project, I used a Random Forest Regressor as the estimator, since the output variable is a continuous numeric variable, and because I chose to retain the outliers. Random Forests are generaly less sensitive to outliers which made this a good choice for use as the estimator with the RFECV selector.
 
 The RFECV selector chose 13 optimal features based on the mean cross-validation test score. In the plot below, after the count of 13, there is no more improvement in the mean score after 13, and this becomes the optimal feature count.
+<br>
+![alt text](/img/posts/pca-variance-plots.png "Feature Selection Using RFE")
 
 
 
