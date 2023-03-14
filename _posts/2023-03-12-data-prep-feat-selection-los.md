@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Data Preparation & Feature Selection 
-for Predicting Length of Stay
+title: Data Preparation & Feature Selection for Predicting Length of Stay
 image: "/posts/cleaning.jpg"
 tags: [Data Cleaning, Healthcare, RFECV]
 ---
