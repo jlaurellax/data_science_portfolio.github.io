@@ -130,7 +130,7 @@ For this project, I used a Random Forest Regressor as the estimator, since the o
 
 ### Analyzing the Results <a name="rfecv-results"></a>
 
-The RFECV selector chose 13 optimal features based on the mean cross-validation test score. In the plot below, after the count of 13, there is no more improvement in the mean score after 13, and this becomes the optimal feature count.
+The RFECV selector chose 13 optimal features based on the mean cross-validation test score. In the plot below, after the count of 13, there is improvement in the mean score after 13, so this becomes the optimal feature count.
 
 <br>
 ![alt text](/img/posts/dataprep_project_rfecv_plot.png "Feature Selection")
@@ -150,6 +150,9 @@ Ranking the features by mean cross-validation test score yielded the below featu
 11. Hospital Admit Count Past 12 Months
 12. Hospital Admit Count Past 3 Months
 13. Age of Patient
+
+
+### Discussion <a name="rfecv-results"></a>
 
 
 
