@@ -32,7 +32,6 @@ It is assumed that most people working with data understand the importance of cl
 
 This dataset came to me as part of a coding test for a position I chose not to pursue. The test requirement was to prepare the dataset for use with predictive models and specifically, for predicting hospital length of stay as the outcome variable. There are multiple clinical and non-clinical input variables included. While I did well enough at the time with the task, looking back on it, I realized I could have made it more efficient, so when I began building this portfolio, it occurred to me to revisit this as a project for inclusion.
 
-<br>
 ### Actions <a name="overview-actions"></a>
 
 This project focuses on completing the steps for dealing with extreme values (i.e., outliers), missing values, converting categorical values, and performing feature scaling before using a technique called Recursive Feature Elimination with Cross-Validation (RFECV) to perform Feature Selection. For the RFECV process, I use the RFECV module from the Sci-Kit Learn library.  Full details of this module and the concept behind its use are in the dedicated section below. Coding samples are included.
@@ -70,7 +69,7 @@ I next perform the following steps:
 * Sort and rank the chosen features by an appropriate statistic
 
 **Note:** the above steps are outlined at a high level and describe how I generally prepare data and perform feature selection, but are not meant to imply any absolutes. It is important to recognize that others may have their own, albeit similar, process. Some of the above steps may also occur in different sequences depending on the project needs.
-<br>
+
 ### Results & Discussion <a name="overview-results"></a>
 
 The initial dataframe presents with 32,000 rows and 221 columns (features). There are 8790 duplicate rows and dropping these results in 23,210 remaining rows. Checking for missing values results in input variables missing between 5 - 98% of values. Because of this widespread variability, I chose not to impute any missing values, even for input variables with a low percentages. Because this is clinical data, if this were being used for a maching learning model, it is likely more appropriate to use factual data, as opposed to imputed, since no two patients are 100% alike. Therefore, I chose to drop any features that contained missing values. 
@@ -88,7 +87,6 @@ Finally, with the data in a prepared state in a new dataframe, I performed the s
 As the output variable (Length of Stay) is a continuous numeric variable and because I chose to keep the outliers in the dataset, I chose a Random Forest Regressor for use with the RFECV selector object. Random Forests, by nature, are less sensitive to outliers, so it made sense to use this for the Regressor object used by the RFECV selector. The selector identified 13 inputs as the optimal number of features and I ranked these by their mean cross-validation test score. The input variable, "Chronic Condition Count', had the highest score and a rank of 1 with "Age" coming in 13th with the lowest score. 
 
 <br>
-
 # Concept Overview  <a name="concept-overview"></a>
 
 #### Data Preparation & Feature Selection
