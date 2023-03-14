@@ -28,9 +28,9 @@ ___
 
 ### Context <a name="overview-context"></a>
 
-It is assumed that most people working with data understand the importance of cleaning and preparing a dataset before attempting to use the dataset in a Machine Learning project. Dealing with extreme or missing values, and correcting / converting data types are common steps in this process. Datasets often have variables that are unnecessary for making predictions on the outcome under investigation and steps should therefore be completed for removing these. 
+It is assumed that most people working with data understand the importance of cleaning and preparing a dataset before attempting to use the dataset in a Machine Learning project. Dealing with extreme or missing values, and correcting / converting data types are common steps in this process. Datasets often have variables that are unnecessary for making predictions on the outcome under investigation and steps should therefore be completed for removing them. 
 
-This dataset came to me as part of a coding test for a position I chose not to pursue. The test requirement was to prepare the dataset for use with predictive models and specifically, for predicting hospital length of stay as the outcome variable. There are multiple clinical and non-clinical input variables included. While I did well enough at the time with the task, looking back on it, I realized I could have made it more efficient, so when I began building this portfolio, it occurred to me to revisit this as a project for inclusion.
+This dataset came to me as part of a coding test for a position I chose not to pursue. The test requirement was to prepare the dataset for use with predictive models and specifically, for predicting hospital length of stay as the outcome variable. There are multiple clinical and non-clinical input variables included. While I did well enough at the time with the task, looking back on it, I realized I could have coded it more efficiently, so when I began building this portfolio, I decided to revisit it as a project for inclusion.
 
 
 ### Actions <a name="overview-actions"></a>
@@ -112,6 +112,9 @@ The data preparation steps are included in the Jupyter Notebook for this project
 
 The initial dataframe presents with 32,000 rows and 221 columns (features) of various clinical data. Through a series of data preparation steps, I arrived at 48 remaining feature columns. Performing One Hot Encoding on the categorical variables increased the number of features to 60. I then scaled all features to a normalized scale, given that most already consisted of 1/0 values. 
 
+
+### Applying RFECV for Feature Selection <a name="rfecv-application"></a>
+
 Feature Selection is the process used to select the input variables that are most important to your Machine Learning task. It can be a very important addition or at least, consideration, in certain scenarios. The potential benefits of Feature Selection are:
 
 * Improved Model Accuracy - eliminating noise can help true relationships stand out
@@ -124,9 +127,31 @@ I applied a variation of RFE called **Recursive Feature Elimination With Cross V
 
 For this project, I used a Random Forest Regressor as the estimator, since the output variable is a continuous numeric variable, and because I chose to retain the outliers. Random Forests are generaly less sensitive to outliers which made this a good choice for use as the estimator with the RFECV selector.
 
+
+### Analyzing the Results <a name="rfecv-results"></a>
+
 The RFECV selector chose 13 optimal features based on the mean cross-validation test score. In the plot below, after the count of 13, there is no more improvement in the mean score after 13, and this becomes the optimal feature count.
+
 <br>
 ![alt text](/img/posts/dataprep_project_rfecv_plot.png "Feature Selection")
+
+Ranking the features by mean cross-validation test score yielded the below features ranked by their score:
+
+1. Chronic Condition Count
+2. Is Chronic Condition Acute Myocardial Infarction
+3. Is Chronic Condition Asthma
+4. Is Chronic Condition Anemia
+5. Days Since Last Inpatient Encounter
+6. Is Admit Source Medical Professional
+7. Is Chronic Condition Ischemic Heart Disease
+8. Is Chronic Condition Heart Failure
+9. Is Admit Source Emergency MD
+10. Procedures Count
+11. Hospital Admit Count Past 12 Months
+12. Hospital Admit Count Past 3 Months
+13. Age of Patient
+
+
 
 
 
