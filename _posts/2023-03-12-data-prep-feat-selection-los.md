@@ -58,7 +58,7 @@ I next perform the following steps:
 * Perform feature scaling, if indicated
 * Shuffle the data, if indicated
 
-
+<br>
 **Feature Selection with RFECV** 
 
 * Create variables for inputs and outputs
@@ -71,7 +71,7 @@ I next perform the following steps:
 
 **Note:** the above steps are outlined at a high level and describe how I generally prepare data and perform feature selection, but are not meant to imply any absolutes. It is important to recognize that others may have their own, albeit similar, process. Some of the above steps may also occur in different sequences depending on the project needs.
 
-
+<br>
 ### Results & Discussion <a name="overview-results"></a>
 
 The initial dataframe presents with 32,000 rows and 221 columns (features). There are 8790 duplicate rows and dropping these results in 23,210 remaining rows. Checking for missing values results in input variables missing between 5 - 98% of values. Because of this widespread variability, I chose not to impute any missing values, even for input variables with low percentages. Because this is clinical data, if this were being used for a machine learning model, it is likely more appropriate to use factual data, as opposed to imputed, since no two patients are 100% alike. Therefore, I chose to drop any features that contained missing values. 
