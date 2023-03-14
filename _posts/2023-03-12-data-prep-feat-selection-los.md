@@ -152,7 +152,7 @@ Ranking the features by mean cross-validation test score yielded the below featu
 13. Age of Patient
 
 
-### Discussion <a name="rfecv-results"></a>
+### Discussion <a name="discussion"></a>
 
 The features selected would naturally all contribute to a patient's length of stay, so while they are not necessarily surprising, it would be interesting to see what the outcome might be if different data preparation steps are followed in the future, such as dropping outliers or imputing missing values, if clinically appropriate. This might change the model type then used as the RFECV estimator likely resulting in different feature selections. 
 
