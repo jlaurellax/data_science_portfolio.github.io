@@ -104,15 +104,13 @@ There are likely many definitions and variations on what it means to prepare dat
 A basic and easy to understand definition for Feature Selection comes from Simplilearn where they define it as “the method of reducing the input variable to your model by using only relevant data and getting rid of noise in data. It is the process of automatically choosing relevant features for your machine learning model based on the type of problem you are trying to solve.” Feature Selection is similar to Data Preparation in that there is the need for optimal model performance and interpretability, both of which occur when the “noisy” inputs are removed.
 
 <br>
-___
-
 # Data Overview and Preparation <a name="data-overview"></a>
 
 The data preparation steps are included in the Jupyter Notebook for this project [here](https://github.com/jlaurellax/project_notebooks/blob/master/Data%20Preparation%20%26%20Feature%20Selection%20with%20Healthcare%20Data.ipynb).
 
 The initial dataframe presents with 32,000 rows and 221 columns (features) of various clinical data. Through a series of data preparation steps, I arrived at 48 remaining feature columns. Performing One Hot Encoding on the categorical variables increased the number of features to 60. I then scaled all features to a normalized scale, given that most already consisted of 1/0 values. 
 
-
+<br>
 ### Applying RFECV for Feature Selection <a name="rfecv-application"></a>
 
 Feature Selection is the process used to select the input variables that are most important to your Machine Learning task. It can be a very important addition or at least, consideration, in certain scenarios. The potential benefits of Feature Selection are:
@@ -127,7 +125,7 @@ I applied a variation of RFE called **Recursive Feature Elimination With Cross V
 
 For this project, I used a Random Forest Regressor as the estimator, since the output variable is a continuous numeric variable, and because I chose to retain the outliers. Random Forests are generaly less sensitive to outliers which made this a good choice for use as the estimator with the RFECV selector.
 
-
+<br>
 ### Analyzing the Results <a name="rfecv-results"></a>
 
 The RFECV selector chose 13 optimal features based on the mean cross-validation test score. In the plot below, after the count of 13, there is improvement in the mean score after 13, so this becomes the optimal feature count.
@@ -151,7 +149,7 @@ Ranking the features by mean cross-validation test score yielded the below featu
 12. Hospital Admit Count Past 3 Months
 13. Age of Patient
 
-
+<br>
 ### Discussion <a name="discussion"></a>
 
 The features selected would naturally all contribute to a patient's length of stay, so while they are not necessarily surprising, it would be interesting to see what the outcome might be if different data preparation steps are followed in the future, such as dropping outliers or imputing missing values, if clinically appropriate. This might change the model type then used as the RFECV estimator likely resulting in different feature selections. 
